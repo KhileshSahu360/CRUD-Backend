@@ -3,4 +3,4 @@ require('dotenv').config();
 
 const dbUrl = process.env.DATABASE_URL;
 
-mongoose.connect(dbUrl);
+mongoose.connect(`${dbUrl}`);
