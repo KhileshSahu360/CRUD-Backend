@@ -2,6 +2,9 @@ const express = require('express');
 const Users = require('./UserSchema');
 const cors = require('cors');
 
+require('dotenv').config();
+
+const port = process.env.PORT || 8000;
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -55,6 +58,6 @@ app.get('/SearchData/:key',async(req,res)=>{
   res.send(result)
 })
 
-app.listen(3001,(req,res)=>{
+app.listen(port,(req,res)=>{
   console.log('server running in 3001 port');
 });
