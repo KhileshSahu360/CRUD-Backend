@@ -58,6 +58,6 @@ app.get('/SearchData/:key',async(req,res)=>{
   res.send(result)
 })
 
-app.listen(port,(req,res)=>{
+app.listen(3001,(req,res)=>{
   console.log('server running in 3001 port');
 });
